@@ -1,0 +1,21 @@
+{
+  "name": "arrowbot",
+  "version": "1.0.0",
+  "description": "This is a Package for adding arrowai functionalities to your bot.",
+  "main": "index.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArrowAI/arrowbot.git"
+  },
+  "keywords": [
+    "arrowai"
+  ],
+  "author": "Utkarsh Shukla",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ArrowAI/arrowbot/issues"
+  },
+  "homepage": "https://github.com/ArrowAI/arrowbot#readme"
+}
