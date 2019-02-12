@@ -1,4 +1,6 @@
-exports.printMsg = function() {
+var User = require('./user');
+
+module.exports = function(apiKey, config) {
     console.log("This is a message from the demo package");
     //Set Application Key and Token  ///Token To be Added Later On
     //Add User
@@ -6,4 +8,9 @@ exports.printMsg = function() {
     //Set User Variable in Existing User
     //Get User Variable
     //Add Dialogflow Logging
-  }
+
+    //Get the Configurations from here
+    return {
+      user: new User(apiKey, config)
+    };
+};
