@@ -1,4 +1,5 @@
 var User = require('./user');
+var Chat = require('./chat');
 
 module.exports = function(apiKey, config) {
     console.log("This is a message from the demo package");
@@ -11,6 +12,7 @@ module.exports = function(apiKey, config) {
 
     //Get the Configurations from here
     return {
-      user: new User(apiKey, config)
+      user: new User(apiKey, config),
+      chat: new Chat(apiKey, config)
     };
 };
