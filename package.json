@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "This is a Package for adding arrowai functionalities to your bot.",
   "main": "src/index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ArrowAI/arrowbot.git"
@@ -17,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/ArrowAI/arrowbot/issues"
   },
-  "homepage": "https://github.com/ArrowAI/arrowbot#readme"
+  "homepage": "https://github.com/ArrowAI/arrowbot#readme",
+  "dependencies": {
+    "request": "^2.88.0"
+  }
 }

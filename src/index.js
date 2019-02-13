@@ -12,7 +12,8 @@ module.exports = function(apiKey, config) {
 
     //Get the Configurations from here
     return {
-      user: new User(apiKey, config),
-      chat: new Chat(apiKey, config)
+      user: new User(apiKey, config.urlRoot || "https://firedev.arrowai.com/", config.debug || false, config.printErrors || true, config),
+      chat: new Chat(apiKey, config.urlRoot || "https://firedev.arrowai.com/", config.debug || false, config.printErrors || true, config)
     };
 };
+console.log(User);
