@@ -2,13 +2,37 @@ var request = require('request');
 function User(apiKey, urlRoot, debug, printErrors, config) {
   var that = this;
 
-  that.getUser = function() {
-    // console.log(apiKey)
-    // console.log(urlRoot)
-    // console.log(debug)
-    // console.log(printErrors)
-    // console.log(config)
-      return JSON.parse('{"success":"ok"}');
+  that.getUser = function(users_email) {
+      //return JSON.parse('{"success":"ok"}');
+      return new Promise((resolve, reject) => {
+        request({
+          method: 'POST',
+          url: urlRoot + '/users/getUsers',
+          headers: {
+              'Content-Type': 'application/json'
+          },
+          json: {
+            "filters":
+            [
+              {"match":{
+                "variable.email":users_email
+              }
+                }
+                ],
+                "allFields":true,
+                apiKey
+          }
+        }, 
+        function(err, httpResponse, body) {
+          console.log(body)
+          if (err) {
+            reject(err)
+          } else {
+            console.log('user detail');
+            resolve(body);
+          }
+        })
+      })
   };
  
   that.addNewUser = function(name, channel, personalInfo={} ,deviceInfo={}) {
