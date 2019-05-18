@@ -81,16 +81,16 @@ function User(apiKey, urlRoot, debug, printErrors, config) {
     return new Promise((resolve, reject) => {
       request({
         method: 'POST',
-        url: urlRoot + '/users/addUserVariables',
+        url: urlRoot + 'users/addUserVariables',
         headers: {
             'Content-Type': 'application/json'
         },
         json: {
           "applicationId": apiKey,
-          groupId,
-          "variable": {
+          "groupId":groupId,
+          "variable": 
             user_var
-          }
+          
         }
       }, 
       function(err, httpResponse, body) {
@@ -111,17 +111,17 @@ function User(apiKey, urlRoot, debug, printErrors, config) {
     return new Promise((resolve, reject) => {
       request({
         method: 'POST',
-        url: urlRoot + '/users/getUserVariables',
+        url: urlRoot + 'users/getUserVariables',
         headers: {
             'Content-Type': 'application/json'
         },
         json: {
           "applicationId": apiKey,
-            groupId,
+            "groupId":groupId,
         }
       }, 
       function(err, httpResponse, body) {
-        console.log(body)
+       
         if (err) {
           reject(err)
         } else {
