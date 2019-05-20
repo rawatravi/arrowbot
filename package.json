@@ -1,6 +1,6 @@
 {
   "name": "arrowbot",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "This is a Package for adding arrowai functionalities to your bot.",
   "main": "src/index.js",
   "scripts": {},
