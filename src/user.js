@@ -81,7 +81,7 @@ function User(apiKey, urlRoot, debug, printErrors, config) {
     return new Promise((resolve, reject) => {
       request({
         method: 'POST',
-        url: urlRoot + 'users/addUserVariables',
+        url: urlRoot + 'users/addUserVariablesMultiple',
         headers: {
             'Content-Type': 'application/json'
         },
